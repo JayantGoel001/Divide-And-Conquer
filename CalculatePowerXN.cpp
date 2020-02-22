@@ -38,5 +38,21 @@ int main()
     cout<<"Enter the value of n:";
     cin>>n;
     cout<<Power(x,n);
-
+    //Iterative method
+    double res=1;
+    cout<<"\n\npower of "<<x<<" raised to " <<n<<" is equal to ";
+    while(n!=0)
+    {
+        if(n>0 &&n%2!=0)
+        {
+            res*=x;
+        }
+        else if(n<0 && n%2!=0)
+        {
+            res/=x;
+        }
+        n=n/2;
+        x=x*x;
+    }
+    cout<<res;
 }
